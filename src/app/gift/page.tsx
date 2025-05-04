@@ -19,10 +19,10 @@ export default function GiftPage() {
         Joyeux anniversaire Dédé!
       </h1>
       <div className="text-6xl md:text-8xl font-extrabold text-accent animate-pulse">
-        {showDede ? 'Dédé' : 'Seydou'}
+        {showDede ? 'For Dédé' : 'By Dousey'}
       </div>
       <p className="text-xl text-accent font-medium mt-8">
-        {showDede ? '❤️' : '❤️'}
+        {showDede ? '❤️' : '🥰'}
       </p>
     </div>
   );
