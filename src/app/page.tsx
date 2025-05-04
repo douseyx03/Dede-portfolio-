@@ -97,29 +97,34 @@ const projectsData: ProjectEntry[] = [
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-4 py-8 max-w-4xl">
-      <ProfileHeader
-        name={profileData.name}
-        title={profileData.title}
-        email={profileData.email}
-        phone={profileData.phone}
-        location={profileData.location}
-        profileImageUrl={profileData.profileImageUrl}
-        cvUrl={profileData.cvUrl}
-        linkedinUrl={profileData.linkedinUrl} // Pass linkedinUrl
-      />
+    <>
+      <main className="container mx-auto px-4 py-8 max-w-4xl flex-grow">
+        <ProfileHeader
+          name={profileData.name}
+          title={profileData.title}
+          email={profileData.email}
+          phone={profileData.phone}
+          location={profileData.location}
+          profileImageUrl={profileData.profileImageUrl}
+          cvUrl={profileData.cvUrl}
+          linkedinUrl={profileData.linkedinUrl} // Pass linkedinUrl
+        />
 
-      <Skills skills={skillsData} />
+        <Skills skills={skillsData} />
 
-      <Experience entries={experienceData} />
+        <Experience entries={experienceData} />
 
-      <Education entries={educationData} />
+        <Education entries={educationData} />
 
-      <Projects entries={projectsData} /> {/* Add Projects section */}
+        <Projects entries={projectsData} /> {/* Add Projects section */}
 
-      {/* Placeholder for future sections if needed */}
-      {/* <Section title="Certifications" icon={Award}>...</Section> */}
+        {/* Placeholder for future sections if needed */}
+        {/* <Section title="Certifications" icon={Award}>...</Section> */}
 
-    </main>
+      </main>
+      <footer className="container mx-auto px-4 py-4 max-w-4xl text-center text-muted-foreground text-sm">
+          © Dédé Couro Diop 2025
+      </footer>
+    </>
   );
 }

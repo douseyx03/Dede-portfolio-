@@ -27,7 +27,7 @@ export default function RootLayout({
     // Apply font variables and lang to <html> to avoid hydration errors
     <html lang="fr" className={`${geistSans.variable} ${geistMono.variable}`}>
       {/* Ensure body is the direct child with no whitespace */}
-      <body className="antialiased">
+      <body className="antialiased flex flex-col min-h-screen">
         {children}
         <Toaster /> {/* Add Toaster */}
       </body>
