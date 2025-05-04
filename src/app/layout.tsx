@@ -24,8 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr"> {/* Set language to French */}
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    // Apply font variables and lang to <html> to avoid hydration errors
+    <html lang="fr" className={`${geistSans.variable} ${geistMono.variable}`}>
+      {/* Ensure body is the direct child with no whitespace */}
+      <body className="antialiased">
         {children}
         <Toaster /> {/* Add Toaster */}
       </body>
