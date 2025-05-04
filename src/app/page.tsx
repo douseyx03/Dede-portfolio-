@@ -8,12 +8,12 @@ import { Projects, ProjectEntry } from "@/components/cv/projects"; // Import Pro
 const profileData = {
   name: "Dédé Couro Diop",
   title: "Ingénieur Électronique",
-  email: "dede.diop@email.com",
-  phone: "+33 6 12 34 56 78",
-  location: "Paris, France",
+  email: "diopdedecouro@email.com",
+  phone: "+33 06 95 67 27 14",
+  location: "Ivry sur Seine, France",
   profileImageUrl: "https://picsum.photos/seed/dede/200/200", // Specific placeholder
   cvUrl: "/cv/CV_Dede_Couro_Diop.pdf", // Placeholder path for the downloadable CV
-  linkedinUrl: "https://www.linkedin.com/in/example-dede-diop", // Placeholder LinkedIn URL
+  linkedinUrl: "https://www.linkedin.com/in/d%C3%A9d%C3%A9-couro-diop-024668281", // Placeholder LinkedIn URL
 };
 
 const skillsData = [
@@ -33,16 +33,22 @@ const skillsData = [
 
 const educationData = [
   {
-    degree: "Master Ingénierie Électronique",
-    institution: "Université de Technologie de Paris",
-    date: "2018 - 2020",
+    degree: "Master Électronique, Énergie électrique et Automatique",
+    institution: "Université Gustave Eiffel, Institut Gaspard Monge",
+    date: "2024 - 2026",
     details: "Spécialisation en systèmes embarqués et objets connectés.",
   },
   {
-    degree: "Licence Sciences pour l'Ingénieur",
-    institution: "Université de Lyon",
-    date: "2015 - 2018",
+    degree: "Licence Électronique, Énergie électrique et Automatique",
+    institution: "Sorbonne Université",
+    date: "2021 - 2024",
     details: "Parcours Électronique, Énergie Électrique, Automatique (EEEA).",
+  },
+  {
+    degree: "Baccalauréat Série S(Scientifique)",
+    institution: "Lycée Jeanne d'Arc - Dakar, Sénégal",
+    date: "2020 - 2021",
+    details: "Mention Bien",
   },
 ];
 
@@ -74,24 +80,43 @@ const experienceData = [
 // Placeholder data for projects
 const projectsData: ProjectEntry[] = [
   {
-    name: "Système de surveillance environnementale IoT",
-    date: "2021",
-    description: "Développement d'un système autonome basé sur ESP32 pour collecter des données environnementales (température, humidité, qualité de l'air) et les envoyer vers une plateforme cloud.",
-    technologies: ["ESP32", "C++", "MQTT", "Capteurs", "PCB Design (KiCad)"],
-    link: "https://github.com/example/iot-monitor" // Optional link
+    name: "Conception d'un robot de transport dans une usine",
+    date: "Mai-Juin 2024",
+    description: "Livraison des colis dans un poste dès la rèception du signal de la centrale en suivant un fil en forme de 8. Développement des modules tels que:Emission infrarouge/Ultason,Récepteur Infrarouge/Ultrason, Détecton d'obstacles par proximètre, Roues, DTMF et servo moteur. ",
+    technologies: ["Arm NXP LPC1769", "C++"],
+    link: "" // Optional link
   },
   {
-    name: "Robot mobile autonome",
-    date: "2019 (Projet Master)",
-    description: "Conception et réalisation d'un robot mobile capable de naviguer dans un environnement inconnu en utilisant des capteurs ultrasoniques et une caméra.",
-    technologies: ["Raspberry Pi", "Python", "ROS", "OpenCV", "Motor Control", "3D Printing"],
+    name: "Robot articulé",
+    date: "Décembre 2023",
+    description: "Modèlisation des articulations robotiques en Python",
+    technologies: ["Visual Studio Code", "Python", "Anaconda"],
   },
     {
-    name: "Analyseur de spectre audio portable",
-    date: "2018",
-    description: "Projet personnel : création d'un analyseur de spectre audio compact utilisant un microcontrôleur STM32 et un écran OLED.",
+    name: "Réalisation d'une console de mixage",
+    date: "Décembre 2023",
+    description: "Réalisation d'une console de mixage sur Matlab: Schéma bloc sur Simulink de l'ècho, réverbèration, saturation et flanger",
     technologies: ["STM32", "C", "FFT", "OLED Display", "Audio Processing"],
   },
+  {
+    name: "Conception d'une console de jeu ",
+    date: "Décembre 2023",
+    description: "Conception d'une console de jeu sur Vivado Casse-Brique et Ping-Pong: Programmation à l'aide du langage VHDL, implementation sur FPGA",
+    technologies: ["VHDL", "FPGA"],
+  },
+  {
+    name: "Mesure des pulsations cardiaques",
+    date: "Avril - Mai 2023",
+    description: "Mesure des pulsations cardiques avec un capteur puis affichage sur un afficheur 7 segment: Capteur infrarouge CNY70, filtrage, Visualition des signaux sur l'oscilloscope.",
+    technologie: ["CNY70", "Oscilloscope"],
+  },
+  {
+    name: "Creation d'un site internet",
+    date: "Avril - Mai 2022",
+    description: "Creation d'un site internet: Recherche des objets perdus avec le logiciel Geany",
+    technologie: ["HTML", "CSS", "PHP"],
+  },
+
 ];
 
 

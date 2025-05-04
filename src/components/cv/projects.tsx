@@ -7,7 +7,7 @@ export interface ProjectEntry {
   name: string;
   date: string;
   description: string;
-  technologies: string[];
+  technologies?: string[]; // Make technologies optional
   link?: string; // Optional link to repository or demo
 }
 
@@ -40,7 +40,7 @@ export function Projects({ entries }: ProjectsProps) {
               <div className="space-y-2">
                 <p>{entry.description}</p>
                 <div className="flex flex-wrap gap-1">
-                  {entry.technologies.map((tech, i) => (
+                  {entry.technologies?.map((tech, i) => ( // Use optional chaining
                     <Badge key={i} variant="secondary" className="text-xs bg-muted text-muted-foreground border border-border">
                       {tech}
                     </Badge>
@@ -55,3 +55,4 @@ export function Projects({ entries }: ProjectsProps) {
     </Section>
   );
 }
+
