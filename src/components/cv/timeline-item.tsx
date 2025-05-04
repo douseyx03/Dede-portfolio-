@@ -1,6 +1,6 @@
 interface TimelineItemProps {
   title: string;
-  subtitle: string;
+  subtitle?: string | React.ReactNode; // Make subtitle optional and allow ReactNode
   date: string;
   description: string | React.ReactNode;
   isLast?: boolean;
@@ -22,7 +22,8 @@ export function TimelineItem({ title, subtitle, date, description, isLast = fals
         <h3 className="text-lg font-semibold text-primary">{title}</h3>
         <span className="text-sm text-muted-foreground">{date}</span>
       </div>
-      <p className="text-md font-medium text-accent mb-2">{subtitle}</p>
+      {/* Render subtitle only if it exists */}
+      {subtitle && <div className="text-md font-medium text-accent mb-2">{subtitle}</div>}
       <div className="text-sm text-foreground/80">{description}</div>
     </div>
   );

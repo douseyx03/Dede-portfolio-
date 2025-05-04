@@ -2,6 +2,7 @@ import { ProfileHeader } from "@/components/cv/profile-header";
 import { Skills } from "@/components/cv/skills";
 import { Education } from "@/components/cv/education";
 import { Experience } from "@/components/cv/experience";
+import { Projects, ProjectEntry } from "@/components/cv/projects"; // Import Projects component and type
 
 // Placeholder data - replace with actual information
 const profileData = {
@@ -69,6 +70,29 @@ const experienceData = [
   },
 ];
 
+// Placeholder data for projects
+const projectsData: ProjectEntry[] = [
+  {
+    name: "Système de surveillance environnementale IoT",
+    date: "2021",
+    description: "Développement d'un système autonome basé sur ESP32 pour collecter des données environnementales (température, humidité, qualité de l'air) et les envoyer vers une plateforme cloud.",
+    technologies: ["ESP32", "C++", "MQTT", "Capteurs", "PCB Design (KiCad)"],
+    link: "https://github.com/example/iot-monitor" // Optional link
+  },
+  {
+    name: "Robot mobile autonome",
+    date: "2019 (Projet Master)",
+    description: "Conception et réalisation d'un robot mobile capable de naviguer dans un environnement inconnu en utilisant des capteurs ultrasoniques et une caméra.",
+    technologies: ["Raspberry Pi", "Python", "ROS", "OpenCV", "Motor Control", "3D Printing"],
+  },
+    {
+    name: "Analyseur de spectre audio portable",
+    date: "2018",
+    description: "Projet personnel : création d'un analyseur de spectre audio compact utilisant un microcontrôleur STM32 et un écran OLED.",
+    technologies: ["STM32", "C", "FFT", "OLED Display", "Audio Processing"],
+  },
+];
+
 
 export default function Home() {
   return (
@@ -85,12 +109,13 @@ export default function Home() {
 
       <Skills skills={skillsData} />
 
-      <Education entries={educationData} />
-
       <Experience entries={experienceData} />
 
+      <Education entries={educationData} />
+
+      <Projects entries={projectsData} /> {/* Add Projects section */}
+
       {/* Placeholder for future sections if needed */}
-      {/* <Section title="Projets Personnels" icon={Lightbulb}>...</Section> */}
       {/* <Section title="Certifications" icon={Award}>...</Section> */}
 
     </main>

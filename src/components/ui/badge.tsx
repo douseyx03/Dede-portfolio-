@@ -15,6 +15,8 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
+        // Added a subtle variant for technologies or tags
+        subtle: "border-transparent bg-accent/10 text-accent hover:bg-accent/20",
       },
     },
     defaultVariants: {
