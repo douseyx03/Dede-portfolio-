@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Download, Linkedin } from 'lucide-react'; // Import Linkedin icon
 
 interface ProfileHeaderProps {
   name: string;
@@ -12,6 +12,7 @@ interface ProfileHeaderProps {
   location: string;
   profileImageUrl?: string;
   cvUrl: string;
+  linkedinUrl?: string; // Add optional linkedinUrl prop
 }
 
 export function ProfileHeader({
@@ -22,6 +23,7 @@ export function ProfileHeader({
   location,
   profileImageUrl = "https://picsum.photos/200/200", // Default placeholder
   cvUrl,
+  linkedinUrl, // Destructure linkedinUrl
 }: ProfileHeaderProps) {
   const initials = name
     .split(' ')
@@ -38,7 +40,7 @@ export function ProfileHeader({
         <div className="flex-grow text-center md:text-left">
           <h1 className="text-3xl font-bold text-primary">{name}</h1>
           <p className="text-xl text-accent font-medium mb-3">{title}</p>
-          <div className="flex flex-col md:flex-row md:items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mb-4 justify-center md:justify-start">
+          <div className="flex flex-col md:flex-row md:items-center gap-x-4 gap-y-1 text-sm text-muted-foreground mb-4 justify-center md:justify-start flex-wrap"> {/* Added flex-wrap */}
             <span className="flex items-center gap-1.5 justify-center md:justify-start">
               <Mail className="w-4 h-4 text-accent" />
               <a href={`mailto:${email}`} className="hover:underline hover:text-accent">{email}</a>
@@ -51,6 +53,13 @@ export function ProfileHeader({
               <MapPin className="w-4 h-4 text-accent" />
               {location}
             </span>
+            {/* Conditionally render LinkedIn link */}
+            {linkedinUrl && (
+              <span className="flex items-center gap-1.5 justify-center md:justify-start">
+                <Linkedin className="w-4 h-4 text-accent" />
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-accent">LinkedIn</a>
+              </span>
+            )}
           </div>
            <Button asChild variant="outline" className="bg-accent text-accent-foreground hover:bg-accent/90 hover:text-accent-foreground border-accent">
             {/* This button simulates the download. Replace '#' with the actual PDF path */}

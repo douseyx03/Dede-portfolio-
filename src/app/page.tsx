@@ -13,6 +13,7 @@ const profileData = {
   location: "Paris, France",
   profileImageUrl: "https://picsum.photos/seed/dede/200/200", // Specific placeholder
   cvUrl: "/cv/CV_Dede_Couro_Diop.pdf", // Placeholder path for the downloadable CV
+  linkedinUrl: "https://www.linkedin.com/in/example-dede-diop", // Placeholder LinkedIn URL
 };
 
 const skillsData = [
@@ -105,6 +106,7 @@ export default function Home() {
         location={profileData.location}
         profileImageUrl={profileData.profileImageUrl}
         cvUrl={profileData.cvUrl}
+        linkedinUrl={profileData.linkedinUrl} // Pass linkedinUrl
       />
 
       <Skills skills={skillsData} />
