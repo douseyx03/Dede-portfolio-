@@ -24,11 +24,13 @@ export default function GiftPage() {
           alt="Fleurs"
           width={256}
           height={256}
+          sizes="(max-width: 768px) 100vw, 256px"
           className="object-cover"
           data-ai-hint="flowers"
         />
       </div>
-      <p className="text-xl text-accent font-medium">Signé, Seydou</p>
+      <p className="text-xl text-accent font-medium">Seydou 🙂</p>
     </div>
   );
 }
+
