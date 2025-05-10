@@ -54,7 +54,7 @@ const educationData = [
 
 const experienceData = [
   {
-    title: "Ingénieur Électronique Senior",
+    title: "Ingénieur Électronique ",
     company: "TechInnov",
     date: "2022 - Présent",
     responsibilities: [
